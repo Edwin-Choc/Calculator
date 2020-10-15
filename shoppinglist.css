@@ -1,0 +1,71 @@
+/* ShoppingList CSS
+CMPS3141-HCI - AS3
+Collaborators: Edwin Choc
+Date: 14/10/2020
+*/
+
+body > div {
+	border: 1px solid;
+}
+.App{
+    border: 10px ridge purple;
+    background-color: white;
+    padding: .5rem;
+    display: flex;
+	flex-direction: column;
+	width: 50%;
+	font-size: 20px;
+	font-family: cursive;
+}
+[property="MyStores"] {
+	border: 2px solid purple;
+}
+
+[property="item"] {
+	border: 2px solid purple;
+}
+[property="AppName"]{
+	font-family: cursive;
+}
+
+[property="frequentlyBought"] {
+	border: 2px solid purple;
+}
+[mv-action="add(item, frequentlyBought)"]{
+	background-color:purple;
+  	border: 2px solid black;
+  	color: white;
+	cursor: pointer;
+	transition: transform .2s;  
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+}
+[mv-action="add(item, frequentlyBought)"]:hover{
+	transform: scale(1.5);	
+}
+[mv-action="add(frequentlyBought, item)"]{
+	background-color:purple;
+  	border: 2px solid black;
+  	color: white;
+	cursor: pointer;
+	transition: transform .2s;  
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+}
+[mv-action="add(frequentlyBought, item)"]:hover{
+	transform: scale(1.5);		
+}
+[mv-app] button.mv-add {
+    display: inline-block;
+	vertical-align: middle;
+	background-color:purple;
+	transition: transform .2s;
+  	border: 2px solid black;
+  	color: white;
+  	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+}
+[mv-app] button.mv-add:hover{
+	transform: scale(1.5);
+}

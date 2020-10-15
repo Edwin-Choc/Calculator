@@ -1,0 +1,28 @@
+{
+	"item": [
+		{
+			"name": "Garlic",
+			"amount": "3 heads",
+			"store": [
+				"Whole Foods",
+				"Walgreens"
+			]
+		},
+		{
+			"name": "Eggs",
+			"amount": 12,
+			"store": [
+				"Whole Foods",
+				"Savenor’s"
+			]
+		},
+		{
+			"name": "Banana",
+			"amount": 4,
+			"store": [
+				"SRV Mini Mart",
+				"New Beginnings"
+			]
+		}
+	]
+}

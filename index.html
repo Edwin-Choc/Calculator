@@ -1,9 +1,57 @@
+<!--CMPS3141-HCI - AS3
+Collaborators: Edwin Choc
+Date: 14/10/2020
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+	<meta charset="UTF-8" />
+	<title>Shopping List app</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+	<script src="https://get.mavo.io/mavo.js"></script>
+	<link rel="stylesheet" href="shoppinglist.css" />
 </head>
-<body>
-    
+
+<!-- You could save back to shopping.json, by using an mv-storage like -->
+<body mv-app mv-storage="local" class="mv-autoedit" mv-init="shopping.json">
+<div class="App">
+	<h1 property="AppName" align="center"></h1>
+	<div property="MyStores">
+		My stores
+
+		<div property="storeUnique" mv-multiple mv-value="unique(store)"></div>
+
+		<p>I'm at <input type="text" property="currentStore">
+	</div>
+
+	<div>
+		Frequently bought items
+		<div property="frequentlyBought" mv-multiple mv-group mv-initial-items="0">
+			<label>Items: </label><div property="name"></div>
+
+			from <span property="store" mv-multiple>Whole Foods</span>
+
+			<button mv-action="add(frequentlyBought, item)">Add to shopping list</button>
+		</div>
+	</div>
+
+	<div>
+		Items to buy:
+		<div property="item" mv-multiple hidden="[currentStore and !(currentStore in store)]">
+			<input type="checkbox" property="bought">
+			
+			<div property="name">Garlic</div>
+
+			<label>Amount: </label><span property="amount">3 heads</span>
+
+			<button mv-action="add(item, frequentlyBought)">Add to frequently bought</button>
+			
+			Store(s): <span property="store" mv-multiple></span>
+		</div>
+	</div>
+
+</div>
 </body>
 </html>
